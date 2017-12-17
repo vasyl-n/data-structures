@@ -1,8 +1,6 @@
-var Stack = () => {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
-  var obj = { storage: {} ,constructor: Stack};
-  extend(obj, methods )
+var Stack = function() {
+  var obj = { storage: {} };
+  extend( obj, methods )
   return obj
 };
 
@@ -13,8 +11,7 @@ methods = {
     var itemToReturn = this.storage[Object.keys(this.storage).length - 1];
     delete this.storage['0'];
     return itemToReturn;
-  },
-  // constructor: function() {return this}
+  }
 };
 
 

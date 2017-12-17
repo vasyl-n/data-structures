@@ -1,4 +1,4 @@
-const Queue = () => {
+var Queue = function() {
   let obj = { storage: {}, s: 0 };
   extend( obj, queueMethods );
   return obj
