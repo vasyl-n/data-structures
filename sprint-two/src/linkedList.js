@@ -9,7 +9,7 @@ var LinkedList = function() {
       list.head = newNode;
       list.tail = newNode;
     }
-    if( list.tail !== null ) {
+    if ( list.tail !== null ) {
       list.tail.next = newNode;
     }
     list.tail = newNode;
@@ -21,15 +21,19 @@ var LinkedList = function() {
     return headValue;
   };
 
-  list.contains = function(target) {
-    for ( var key in list ) {
-      if ( key.value === target ) {
-        return true;
-      }
+  list.contains = function(target, node) {
+    if ( node === undefined ) {
+      node = list.head;
     }
-    return false;
+    if ( target === node.value ) {
+      return true;
+    }
+    if ( node.next === null ) {
+      return false;
+    }
+    node = node.next;
+    return list.contains(target, node);
   };
-
   return list;
 };
 
