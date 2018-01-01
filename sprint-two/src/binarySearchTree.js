@@ -45,12 +45,9 @@ BinarySearchTree.prototype.contains = function(searchValue) {
 
 
 BinarySearchTree.prototype.depthFirstLog = function(cb) {
-  // cb(this.value)
-  // if ( this === null) {
-  //   return
-  // }
-  // else
-  // }
+  this.value !== null && cb(this.value);
+  this.left !== null && this.left.depthFirstLog(cb);
+  this.right !== null && this.right.depthFirstLog(cb);
 };
 
 /*
