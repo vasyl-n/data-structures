@@ -25,10 +25,10 @@ describe('set', function() {
   });
 
   it('should accept all data types', function() {
-    set.add("string");
+    set.add('string');
     set.add(2);
     set.add(true);
-    set.add({a:1, name:"bob"});
+    set.add({'a': 1, name: 'bob'});
     set.add([]);
     set.add(null);
     set.add(undefined);
@@ -37,11 +37,12 @@ describe('set', function() {
     expect(set.contains("string")).to.equal(true);
     expect(set.contains(2)).to.equal(true);
     expect(set.contains(true)).to.equal(true);
-    expect(set.contains({'a':1, 'name':'bob'})).to.equal(true);
-    // expect(set.contains([])).to.equal(true);
-    // expect(set.contains(null)).to.equal(true);
-    // expect(set.contains(NaN)).to.equal(true);
-    // expect(set.contains(undefined)).to.equal(true);
+    expect(set.contains({'a': 1, 'name': 'bob'})).to.equal(true);
+    expect(set.contains([])).to.equal(true);
+    expect(set.contains(null)).to.equal(true);
+    expect(set.contains(NaN)).to.equal(true);
+    expect(set.contains(undefined)).to.equal(true);
+    expect(set.contains(5)).to.equal(false);
   });
 
 });
